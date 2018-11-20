@@ -3,12 +3,14 @@ import ReactDOM from "react-dom";
 
 import "./styles.css";
 
-
 class Cat extends React.Component {
   render() {
     const mouse = this.props.mouse;
     return (
-      <img src="/cat.jpg" style={{ position: 'absolute', left: mouse.x, top: mouse.y }} />
+      <img
+        src="/cat1.jpg"
+        style={{ position: "absolute", left: mouse.x, top: mouse.y }}
+      />
     );
   }
 }
@@ -29,8 +31,7 @@ class Mouse extends React.Component {
 
   render() {
     return (
-      <div style={{ height: '100%' }} onMouseMove={this.handleMouseMove}>
-
+      <div style={{ height: "100%" }} onMouseMove={this.handleMouseMove}>
         {/*
           Instead of providing a static representation of what <Mouse> renders,
           use the `render` prop to dynamically determine what to render.
@@ -46,9 +47,7 @@ class MouseTracker extends React.Component {
     return (
       <div>
         <h1>Move the mouse around!</h1>
-        <Mouse render={mouse => (
-          <Cat mouse={mouse} />
-        )} />
+        <Mouse render={mouse => <Cat mouse={mouse} />} />
       </div>
     );
   }
