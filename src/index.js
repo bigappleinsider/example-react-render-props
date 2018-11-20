@@ -8,7 +8,7 @@ class Cat extends React.Component {
     const mouse = this.props.mouse;
     return (
       <img
-        src="/cat1.jpg"
+        src="https://placeimg.com/200/200/animals"
         style={{ position: "absolute", left: mouse.x, top: mouse.y }}
       />
     );
